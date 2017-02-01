@@ -50,7 +50,12 @@ class MainHandler(webapp2.RequestHandler):
         self.response.write(content)
 
     def post(self):
-
+        username = self.request.get("username")
+        password = self.request.get("password")
+        ver_pwd = self.request.get("ver_pwd")
+        email = self.request.get("email")
+        content = build_page(escaped_message)
+        self.response.write(content)
 
 
 app = webapp2.WSGIApplication([
